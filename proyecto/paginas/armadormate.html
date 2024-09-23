@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mateando - Cebador</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../styles/style.css">
+</head>
+<body>
+    <header class="header-content d-flex align-items-center justify-content-between bg-success text-white p-3">
+        <img src="../Misc/logo.png" alt="Logo de Mateando" class="logo" style="width: 50px; height: auto;">
+        <h1 class="m-0">Mateando</h1>
+        <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <nav class="navbar navbar-expand-lg navbar-light bg-success w-100">
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="../paginaprincipal.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="historiamate.html">El mate y sus tipos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="armadormate.html">Cebador</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <section class="cebador-content p-4">
+        <h2>El cebador</h2>
+        <div class="text-column">
+            <p>El cebador es una figura clave en la tradición del mate. Es la persona encargada de preparar la bebida y servirla a los demás participantes, siguiendo un ritual que se ha transmitido de generación en generación.</p>
+        </div>
+
+        <div class="image-container">
+            <img src="../Misc/cebador.jpg" alt="Cebador preparando mate" class="cebador-image">
+        </div>
+
+        <div class="text-column">
+            <p>La tarea del cebador no solo implica preparar el mate, sino también mantener el orden en el círculo de mates, asegurando que cada participante reciba su turno en el momento adecuado. Su papel es fundamental para preservar la armonía y el respeto en la ronda.</p>
+        </div>
+    </section>
+
+    <section class="p-4">
+        <h2>Objetos Indispensables para el Cebador</h2>
+        <div class="row">
+            <div class="col-md-3">
+                <div class="card text-center mb-3">
+                    <img src="../Misc/yerba.jpg" class="card-img-top" alt="Yerba Mate">
+                    <div class="card-body">
+                        <h5 class="card-title">Yerba Mate</h5>
+                        <p class="card-text">La base de toda buena infusión de mate.</p>
+                        <input type="checkbox" id="yerba">
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card text-center mb-3">
+                    <img src="../Misc/mate.jpg" class="card-img-top" alt="Mate">
+                    <div class="card-body">
+                        <h5 class="card-title">Mate</h5>
+                        <p class="card-text">El recipiente que da vida al ritual.</p>
+                        <input type="checkbox" id="mate">
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card text-center mb-3">
+                    <img src="../Misc/bombilla.jpg" class="card-img-top" alt="Bombilla">
+                    <div class="card-body">
+                        <h5 class="card-title">Bombilla</h5>
+                        <p class="card-text">La herramienta para disfrutar del mate.</p>
+                        <input type="checkbox" id="bombilla">
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card text-center mb-3">
+                    <img src="../Misc/termo.jpg" class="card-img-top" alt="Termo">
+                    <div class="card-body">
+                        <h5 class="card-title">Termo</h5>
+                        <p class="card-text">Para mantener el agua caliente.</p>
+                        <input type="checkbox" id="termo">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="p-4">
+        <h2>Cómo Cebar un Buen Mate</h2>
+        <div class="row">
+            <div class="col-md-4 mb-3">
+                <div class="card text-center">
+                    <div class="card-body bg-primary text-white">
+                        <h5 class="card-title"><i class="fas fa-leaf"></i> 1. Preparar el Mate</h5>
+                        <p class="card-text">Llenar el mate con yerba hasta un poco más de la mitad.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-3">
+                <div class="card text-center">
+                    <div class="card-body bg-success text-white">
+                        <h5 class="card-title"><i class="fas fa-strawberry"></i> 2. Colocar la Bombilla</h5>
+                        <p class="card-text">Incluir la bombilla en el lado, evitando que se tape.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-3">
+                <div class="card text-center">
+                    <div class="card-body bg-info text-white">
+                        <h5 class="card-title"><i class="fas fa-water"></i> 3. Agregar Agua Caliente</h5>
+                        <p class="card-text">Verter agua caliente, pero no hirviendo, en el espacio vacío.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 mb-3">
+                <div class="card text-center">
+                    <div class="card-body bg-warning text-dark">
+                        <h5 class="card-title"><i class="fas fa-cup"></i> 4. Disfrutar</h5>
+                        <p class="card-text">Pasar el mate al siguiente, quien debe tomar todo el líquido.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 mb-3">
+                <div class="card text-center">
+                    <div class="card-body bg-danger text-white">
+                        <h5 class="card-title"><i class="fas fa-redo"></i> 5. Repetir</h5>
+                        <p class="card-text">Recargar yerba y agua caliente según sea necesario.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <p class="mt-3">Recuerda que el cebador debe cuidar el orden y asegurarse de que todos tengan su turno.</p>
+    </section>
+    
+
+    <footer class="text-center py-3 bg-light">
+        <p>Para más información sobre el mate, visita este <a href="https://es.wikipedia.org/wiki/Mate_(infusi%C3%B3n)" target="_blank">enlace</a>.</p>
+        <p><a href="contacto.html" target="_blank">Contáctanos!</a>.</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
