@@ -1,237 +1,258 @@
+@charset "UTF-8";
 body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    background-color: #f9f9f9;
-    margin: 0;
-    padding: 20px;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f9f9f9;
+  margin: 0;
+  padding: 20px;
 }
 
 header {
-    background-color: #4caf50;
-    color: black;
-    padding: 10px 0;
-    text-align: center;
+  background-color: #4caf50;
+  color: black;
+  padding: 10px 0;
+  text-align: center;
 }
 
 .header-content {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .logo {
-    height: 50px;
-    margin-right: 20px;
+  height: 50px;
+  margin-right: 20px;
 }
 
 section {
-    background-color: rosybrown;
-    padding: 20px;
-    margin: 20px 0;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: rosybrown;
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .con-imagen {
-    display: flex;
-    align-items: center;
-    margin: 20px 0;
-    padding: 20px;
-    background-color: rosybrown;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+  padding: 20px;
+  background-color: rosybrown;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .section-imagen {
-    width: 300px; 
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 300px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .contenido-div-texto {
-    flex: 1;
-    padding-right: 20px;
+  flex: 1;
+  padding-right: 20px;
 }
 
 .columna {
-    width: 45%;
-    float: left;
-    margin-right: 5%;
-    background-color: rosybrown;
-    border-radius: 8px;
+  width: 45%;
+  float: left;
+  margin-right: 5%;
+  background-color: rosybrown;
+  border-radius: 8px;
 }
 
 .columna:last-child {
-    margin-right: 0;
+  margin-right: 0;
 }
 
 footer {
-    text-align: center;
-    padding: 10px 0;
-    color: #555;
+  text-align: center;
+  padding: 10px 0;
+  color: #555;
 }
 
 .clearfix::after {
-    content: "";
-    display: table;
-    clear: both;
+  content: "";
+  display: table;
+  clear: both;
 }
 
 .mate-list {
-    margin-top: 20px;
-    padding-left: 20px;
+  margin-top: 20px;
+  padding-left: 20px;
 }
 
 .cebador-content {
-    text-align: center;
+  text-align: center;
 }
 
 .text-column, .image-container {
-    display: inline-block;
-    vertical-align: top;
-    width: 20%;
-    margin: 0 2%;
-    text-align: justify;
+  display: inline-block;
+  vertical-align: top;
+  width: 20%;
+  margin: 0 2%;
+  text-align: justify;
 }
 
 .image-container {
-    width: 36%;
-    text-align: center;
+  width: 36%;
+  text-align: center;
 }
 
 .cebador-image {
-    max-width: 100%;
-    height: auto;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .checklist {
-    list-style-type: none;
-    padding-left: 0;
+  list-style-type: none;
+  padding-left: 0;
 }
 
 .clearfix::after {
-    content: "";
-    display: table;
-    clear: both;
+  content: "";
+  display: table;
+  clear: both;
 }
 
 /* Estilos generales para el header */
 .header-content {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000; 
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
 }
 
 /* Espacio para que el contenido no se oculte detrás del header */
 body {
-    padding-top: 70px; /* Ajusta según la altura de tu header */
+  padding-top: 70px; /* Ajusta según la altura de tu header */
 }
 
 .navbar-toggler {
-    border: none; /* Sin borde */
+  border: none; /* Sin borde */
 }
 
 /* Responsividad para pantallas grandes */
 @media (min-width: 992px) {
-    .header-content {
-        padding: 20px; /* Espacio extra en pantallas grandes */
-    }
+  .header-content {
+    padding: 20px; /* Espacio extra en pantallas grandes */
+  }
 }
-
 /* Responsividad para tabletas */
 @media (max-width: 991px) and (min-width: 768px) {
-    .navbar {
-        margin-top: 70px; /* Espacio para evitar superposición con el header */
-        padding: 10px 0; /* Espaciado vertical */
-        text-align: center; /* Centrar el contenido */
-        width: 100%; /* Asegúrate de que ocupe el ancho completo */
-        position: relative; /* Para asegurarse de que no se superponga */
-    }
-
-    .navbar ul {
-        display: flex; /* Usar flexbox para alineación */
-        flex-direction: column; /* Cambiar a columna en móviles */
-        align-items: center; /* Centrar los elementos */
-        padding: 0; /* Sin padding */
-        margin: 0; /* Sin margen */
-    }
-
-    .navbar li {
-        margin: 5px 0; /* Espacio entre enlaces */
-    }
-    
-    .navbar-toggler {
-        background-color: #4caf50; /* Cambia el color de fondo */
-        border: none; /* Sin borde */
-        border-radius: 5px; /* Bordes redondeados */
-        padding: 10px; /* Espaciado interno */
-        transition: background-color 0.3s; /* Transición suave */
-    }
-    
-    .navbar-toggler:hover {
-        background-color: #4caf50; /* Color al pasar el mouse */
-    }
-    
-    .navbar-toggler-icon {
-        background-image: none; /* Eliminar el icono predeterminado */
-    }
-    
-    .navbar-toggler:before {
-        content: '☰'; /* Agregar un icono de hamburguesa */
-        font-size: 24px; /* Tamaño del icono */
-        color: white; /* Color del icono */
-    }
-
+  .navbar {
+    margin-top: 70px; /* Espacio para evitar superposición con el header */
+    padding: 10px 0; /* Espaciado vertical */
+    text-align: center; /* Centrar el contenido */
+    width: 100%; /* Asegúrate de que ocupe el ancho completo */
+    position: relative; /* Para asegurarse de que no se superponga */
+  }
+  .navbar ul {
+    display: flex; /* Usar flexbox para alineación */
+    flex-direction: column; /* Cambiar a columna en móviles */
+    align-items: center; /* Centrar los elementos */
+    padding: 0; /* Sin padding */
+    margin: 0; /* Sin margen */
+  }
+  .navbar li {
+    margin: 5px 0; /* Espacio entre enlaces */
+  }
+  .navbar-toggler {
+    background-color: #4caf50; /* Cambia el color de fondo */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    padding: 10px; /* Espaciado interno */
+    transition: background-color 0.3s; /* Transición suave */
+  }
+  .navbar-toggler:hover {
+    background-color: #4caf50; /* Color al pasar el mouse */
+  }
+  .navbar-toggler-icon {
+    background-image: none; /* Eliminar el icono predeterminado */
+  }
+  .navbar-toggler:before {
+    content: "☰"; /* Agregar un icono de hamburguesa */
+    font-size: 24px; /* Tamaño del icono */
+    color: white; /* Color del icono */
+  }
 }
-
-
 /* Responsividad para teléfonos */
 @media (max-width: 767px) {
-    .navbar {
-        margin-top: 70px; /* Espacio para evitar superposición con el header */
-        padding: 10px 0; /* Espaciado vertical */
-        text-align: center; /* Centrar el contenido */
-        width: 100%; /* Asegúrate de que ocupe el ancho completo */
-        position: relative; /* Para asegurarse de que no se superponga */
-    }
-
-    .navbar ul {
-        display: flex; /* Usar flexbox para alineación */
-        flex-direction: column; /* Cambiar a columna en móviles */
-        align-items: center; /* Centrar los elementos */
-        padding: 0; /* Sin padding */
-        margin: 0; /* Sin margen */
-    }
-
-    .navbar li {
-        margin: 5px 0; /* Espacio entre enlaces */
-    }
-    
-    .navbar-toggler {
-        background-color: #4caf50; /* Cambia el color de fondo */
-        border: none; /* Sin borde */
-        border-radius: 5px; /* Bordes redondeados */
-        padding: 10px; /* Espaciado interno */
-        transition: background-color 0.3s; /* Transición suave */
-    }
-    
-    .navbar-toggler:hover {
-        background-color: #4caf50; /* Color al pasar el mouse */
-    }
-    
-    .navbar-toggler-icon {
-        background-image: none; /* Eliminar el icono predeterminado */
-    }
-    
-    .navbar-toggler:before {
-        content: '☰'; /* Agregar un icono de hamburguesa */
-        font-size: 24px; /* Tamaño del icono */
-        color: white; /* Color del icono */
-    }
-
+  .navbar {
+    margin-top: 70px; /* Espacio para evitar superposición con el header */
+    padding: 10px 0; /* Espaciado vertical */
+    text-align: center; /* Centrar el contenido */
+    width: 100%; /* Asegúrate de que ocupe el ancho completo */
+    position: relative; /* Para asegurarse de que no se superponga */
+  }
+  .navbar ul {
+    display: flex; /* Usar flexbox para alineación */
+    flex-direction: column; /* Cambiar a columna en móviles */
+    align-items: center; /* Centrar los elementos */
+    padding: 0; /* Sin padding */
+    margin: 0; /* Sin margen */
+  }
+  .navbar li {
+    margin: 5px 0; /* Espacio entre enlaces */
+  }
+  .navbar-toggler {
+    background-color: #4caf50; /* Cambia el color de fondo */
+    border: none; /* Sin borde */
+    border-radius: 5px; /* Bordes redondeados */
+    padding: 10px; /* Espaciado interno */
+    transition: background-color 0.3s; /* Transición suave */
+  }
+  .navbar-toggler:hover {
+    background-color: #4caf50; /* Color al pasar el mouse */
+  }
+  .navbar-toggler-icon {
+    background-image: none; /* Eliminar el icono predeterminado */
+  }
+  .navbar-toggler:before {
+    content: "☰"; /* Agregar un icono de hamburguesa */
+    font-size: 24px; /* Tamaño del icono */
+    color: white; /* Color del icono */
+  }
+}
+body {
+  font-family: Arial, sans-serif;
 }
 
+.btn {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+.btn:hover {
+  background-color: rgb(30.1449275362, 125.8550724638, 52);
+  color: white;
+}
+
+.header-content {
+  background-color: #28a745;
+}
+
+.con-imagen {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 20px 0;
+}
+.con-imagen .contenido-div-texto {
+  flex: 1;
+  margin-right: 20px;
+}
+.con-imagen .section-imagen {
+  width: 300px;
+  height: auto;
+}
+
+footer {
+  background-color: #28a745;
+  color: white;
+  padding: 20px 0;
+}
+
+/*# sourceMappingURL=style.css.map */
