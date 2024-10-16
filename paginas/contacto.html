@@ -32,12 +32,33 @@
     </header>
     
     <section class="contact-section p-4">
-        <h2>Información de Contacto</h2>
+        <h2 class="text-center">Información de Contacto</h2>
         <p>Para cualquier consulta o colaboración relacionada con el proyecto <strong>Mateando</strong>, puedes contactarme a través de los siguientes medios:</p>
 
-        <div class="contact-info">
-            <p><strong>Teléfono:</strong> +54 9 11 1234-5678</p>
-            <p><strong>Email:</strong> lautaro.fuertes@email.com</p>
+        <div class="contact-info d-flex justify-content-center mb-4">
+            <div class="contact-card p-3 m-2 bg-light rounded shadow">
+                <p><strong>Teléfono:</strong> +54 9 11 1234-5678</p>
+                <p><strong>Email:</strong> lautaro.fuertes@email.com</p>
+            </div>
+        </div>
+
+        <div class="contact-form-container p-4 bg-light rounded shadow">
+            <h3>Envíanos un Mensaje</h3>
+            <form action="#" method="post">
+                <div class="form-group">
+                    <label for="name">Nombre</label>
+                    <input type="text" class="form-control" id="name" placeholder="Tu nombre" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control" id="email" placeholder="Tu correo electrónico" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Mensaje</label>
+                    <textarea class="form-control" id="message" rows="5" placeholder="Tu mensaje" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-success btn-block">Enviar</button>
+            </form>
         </div>
     </section>
 
