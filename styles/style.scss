@@ -1,27 +1,48 @@
+$primary-color: #28a745;
+$hover-color: darken($primary-color, 10%);
+
 body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
     background-color: #f9f9f9;
     margin: 0;
     padding: 20px;
+    padding-top: 70px;
 }
 
 header {
-    background-color: #4caf50;
+    background: linear-gradient(45deg, #28a745, #218838);
     color: black;
-    padding: 10px 0;
-    text-align: center;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+    h1 {
+        font-family: 'Courier New', Courier, monospace;
+        letter-spacing: 2px;
+    }
+
+    .logo {
+        height: 50px;
+        margin-right: 20px;
+        border-radius: 50%;
+        transition: transform 0.3s ease;
+
+        &:hover {
+            transform: rotate(360deg);
+        }
+    }
 }
 
 .header-content {
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-.logo {
-    height: 50px;
-    margin-right: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: $primary-color;
 }
 
 section {
@@ -35,22 +56,20 @@ section {
 .con-imagen {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     margin: 20px 0;
-    padding: 20px;
-    background-color: rosybrown;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
 
-.section-imagen {
-    width: 300px; 
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
+    .contenido-div-texto {
+        flex: 1;
+        margin-right: 20px;
+    }
 
-.contenido-div-texto {
-    flex: 1;
-    padding-right: 20px;
+    .section-imagen {
+        width: 300px;
+        height: auto;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
 }
 
 .columna {
@@ -59,16 +78,32 @@ section {
     margin-right: 5%;
     background-color: rosybrown;
     border-radius: 8px;
-}
 
-.columna:last-child {
-    margin-right: 0;
+    &:last-child {
+        margin-right: 0;
+    }
 }
 
 footer {
+    background-color: $primary-color;
+    color: white;
+    padding: 20px 0;
     text-align: center;
-    padding: 10px 0;
-    color: #555;
+
+    a {
+        color: #fff;
+        text-decoration: none;
+        transition: color 0.3s ease;
+
+        &:hover {
+            color: #ddd;
+            text-decoration: underline;
+        }
+    }
+
+    p {
+        margin: 0;
+    }
 }
 
 .clearfix::after {
@@ -111,173 +146,6 @@ footer {
     padding-left: 0;
 }
 
-.clearfix::after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
-/* Estilos generales para el header */
-.header-content {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000; 
-}
-
-/* Espacio para que el contenido no se oculte detrás del header */
-body {
-    padding-top: 70px; /* Ajusta según la altura de tu header */
-}
-
-.navbar-toggler {
-    border: none; /* Sin borde */
-}
-
-/* Responsividad para pantallas grandes */
-@media (min-width: 992px) {
-    .header-content {
-        padding: 20px; /* Espacio extra en pantallas grandes */
-    }
-}
-
-/* Responsividad para tabletas */
-@media (max-width: 991px) and (min-width: 768px) {
-    .navbar {
-        margin-top: 70px; /* Espacio para evitar superposición con el header */
-        padding: 10px 0; /* Espaciado vertical */
-        text-align: center; /* Centrar el contenido */
-        width: 100%; /* Asegúrate de que ocupe el ancho completo */
-        position: relative; /* Para asegurarse de que no se superponga */
-    }
-
-    .navbar ul {
-        display: flex; /* Usar flexbox para alineación */
-        flex-direction: column; /* Cambiar a columna en móviles */
-        align-items: center; /* Centrar los elementos */
-        padding: 0; /* Sin padding */
-        margin: 0; /* Sin margen */
-    }
-
-    .navbar li {
-        margin: 5px 0; /* Espacio entre enlaces */
-    }
-    
-    .navbar-toggler {
-        background-color: #4caf50; /* Cambia el color de fondo */
-        border: none; /* Sin borde */
-        border-radius: 5px; /* Bordes redondeados */
-        padding: 10px; /* Espaciado interno */
-        transition: background-color 0.3s; /* Transición suave */
-    }
-    
-    .navbar-toggler:hover {
-        background-color: #4caf50; /* Color al pasar el mouse */
-    }
-    
-    .navbar-toggler-icon {
-        background-image: none; /* Eliminar el icono predeterminado */
-    }
-    
-    .navbar-toggler:before {
-        content: '☰'; /* Agregar un icono de hamburguesa */
-        font-size: 24px; /* Tamaño del icono */
-        color: white; /* Color del icono */
-    }
-
-}
-
-
-/* Responsividad para teléfonos */
-@media (max-width: 767px) {
-    .navbar {
-        margin-top: 70px; /* Espacio para evitar superposición con el header */
-        padding: 10px 0; /* Espaciado vertical */
-        text-align: center; /* Centrar el contenido */
-        width: 100%; /* Asegúrate de que ocupe el ancho completo */
-        position: relative; /* Para asegurarse de que no se superponga */
-    }
-
-    .navbar ul {
-        display: flex; /* Usar flexbox para alineación */
-        flex-direction: column; /* Cambiar a columna en móviles */
-        align-items: center; /* Centrar los elementos */
-        padding: 0; /* Sin padding */
-        margin: 0; /* Sin margen */
-    }
-
-    .navbar li {
-        margin: 5px 0; /* Espacio entre enlaces */
-    }
-    
-    .navbar-toggler {
-        background-color: #4caf50; /* Cambia el color de fondo */
-        border: none; /* Sin borde */
-        border-radius: 5px; /* Bordes redondeados */
-        padding: 10px; /* Espaciado interno */
-        transition: background-color 0.3s; /* Transición suave */
-    }
-    
-    .navbar-toggler:hover {
-        background-color: #4caf50; /* Color al pasar el mouse */
-    }
-    
-    .navbar-toggler-icon {
-        background-image: none; /* Eliminar el icono predeterminado */
-    }
-    
-    .navbar-toggler:before {
-        content: '☰'; /* Agregar un icono de hamburguesa */
-        font-size: 24px; /* Tamaño del icono */
-        color: white; /* Color del icono */
-    }
-
-}
-// ESTO ES LO NUEVO EN SASS// 
-
-$primary-color: #28a745;
-$hover-color: darken($primary-color, 10%);
-
-body {
-    font-family: Arial, sans-serif;
-}
-
-.btn {
-    transition: background-color 0.3s ease, color 0.3s ease;
-    &:hover {
-        background-color: $hover-color;
-        color: white;
-    }
-}
-
-.header-content {
-    background-color: $primary-color;
-}
-
-.con-imagen {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin: 20px 0;
-
-    .contenido-div-texto {
-        flex: 1;
-        margin-right: 20px;
-    }
-
-    .section-imagen {
-        width: 300px;
-        height: auto;
-    }
-}
-
-footer {
-    background-color: $primary-color;
-    color: white;
-    padding: 20px 0;
-}
-
 .navbar {
     transition: background-color 0.3s ease;
     &:hover {
@@ -287,6 +155,7 @@ footer {
 
 img {
     transition: transform 0.3s ease;
+
     &:hover {
         transform: scale(1.05);
     }
@@ -319,47 +188,6 @@ img {
 
     .blockquote-footer {
         color: #6c757d;
-    }
-}
-
-header {
-    background: linear-gradient(45deg, #28a745, #218838);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-
-    h1 {
-        font-family: 'Courier New', Courier, monospace;
-        letter-spacing: 2px;
-    }
-
-    .logo {
-        border-radius: 50%;
-        transition: transform 0.3s ease;
-        &:hover {
-            transform: rotate(360deg);
-        }
-    }
-}
-
-footer {
-    background-color: #28a745;
-    color: white;
-    padding: 20px 0;
-    text-align: center;
-
-    a {
-        color: #fff;
-        text-decoration: none;
-        transition: color 0.3s ease;
-
-        &:hover {
-            color: #ddd;
-            text-decoration: underline;
-        }
-    }
-
-    p {
-        margin: 0;
     }
 }
 
@@ -426,7 +254,7 @@ h2, h3, p strong {
     padding: 2px 4px; 
     transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
     border-radius: 4px; 
-    
+
     &:hover {
         background-color: #eaf5ea; 
         color: #155724; 
@@ -436,33 +264,130 @@ h2, h3, p strong {
 .mate-polemica {
     text-align: center;
     margin-top: 40px;
+
+    h1 {
+        font-size: 2rem;
+        font-weight: bold;
+        color: #2c3e50;
+    }
+
+    .enlace-polemica {
+        color: #e74c3c;
+        text-decoration: none;
+        position: relative;
+        font-weight: 700;
+
+        &::after {
+            content: "⚠️";
+            margin-left: 5px;
+            font-size: 1.2rem;
+        }
+
+        &:hover {
+            color: #c0392b;
+            text-decoration: underline;
+
+            &::after {
+                transform: scale(1.2);
+                transition: transform 0.3s ease;
+            }
+        }
+    }
 }
 
-.mate-polemica h1 {
-    font-size: 2rem;
-    font-weight: bold;
-    color: #2c3e50;
+/* Responsividad para pantallas grandes */
+@media (min-width: 992px) {
+    .header-content {
+        padding: 20px;
+    }
 }
 
-.mate-polemica .enlace-polemica {
-    color: #e74c3c;
-    text-decoration: none;
-    position: relative;
-    font-weight: 700;
+/* Responsividad para tabletas */
+@media (max-width: 991px) and (min-width: 768px) {
+    .navbar {
+        margin-top: 70px;
+        padding: 10px 0;
+        text-align: center;
+        width: 100%;
+        position: relative;
+    }
+
+    .navbar ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+        margin: 0;
+    }
+
+    .navbar li {
+        margin: 5px 0;
+    }
+
+    .navbar-toggler {
+        background-color: #4caf50;
+        border: none;
+        border-radius: 5px;
+        padding: 10px;
+        transition: background-color 0.3s;
+
+        &:hover {
+            background-color: #4caf50;
+        }
+
+        &-icon {
+            background-image: none;
+        }
+
+        &:before {
+            content: '☰';
+            font-size: 24px;
+            color: white;
+        }
+    }
 }
 
-.mate-polemica .enlace-polemica::after {
-    content: "⚠️";
-    margin-left: 5px;
-    font-size: 1.2rem;
-}
+/* Responsividad para teléfonos */
+@media (max-width: 767px) {
+    .navbar {
+        margin-top: 70px;
+        padding: 10px 0;
+        text-align: center;
+        width: 100%;
+        position: relative;
+    }
 
-.mate-polemica .enlace-polemica:hover {
-    color: #c0392b;
-    text-decoration: underline;
-}
+    .navbar ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+        margin: 0;
+    }
 
-.mate-polemica .enlace-polemica:hover::after {
-    transform: scale(1.2);
-    transition: transform 0.3s ease;
+    .navbar li {
+        margin: 5px 0;
+    }
+
+    .navbar-toggler {
+        background-color: #4caf50;
+        border: none;
+        border-radius: 5px;
+        padding: 10px;
+        transition: background-color 0.3s;
+
+        &:hover {
+            background-color: #4caf50;
+        }
+
+        &-icon {
+            background-image: none;
+        }
+
+        &:before {
+            content: '☰';
+            font-size: 24px;
+            color: white;
+        }
+    }
 }
