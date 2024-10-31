@@ -9,7 +9,7 @@ body {
 }
 
 header {
-  background: linear-gradient(45deg, #28a745, #218838);
+  background: linear-gradient(45deg, #28a745, rgb(30.1449275362, 125.8550724638, 52));
   color: black;
   padding: 20px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -48,6 +48,24 @@ section {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
+img, .btn, h2, h3, p strong {
+  transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
+img:hover, .btn:hover, h2:hover, h3:hover, p strong:hover {
+  transform: scale(1.05);
+}
+
+h2, h3, p strong {
+  cursor: pointer;
+  display: inline-block;
+  padding: 2px 4px;
+  border-radius: 4px;
+}
+h2:hover, h3:hover, p strong:hover {
+  background-color: #eaf5ea;
+  color: #155724;
+}
+
 .con-imagen {
   display: flex;
   align-items: center;
@@ -63,6 +81,66 @@ section {
   height: auto;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+.con-imagen .section-imagen:hover {
+  transform: scale(1.05);
+}
+
+.image-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  text-align: center;
+  margin: 20px 0;
+}
+
+.cebador-image {
+  max-width: 30%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.checkbox-container {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+  user-select: none;
+}
+.checkbox-container .checkbox {
+  display: none;
+}
+.checkbox-container .checkmark {
+  width: 20px;
+  height: 20px;
+  background-color: #f0f0f0;
+  border: 2px solid #28a745;
+  border-radius: 4px;
+  position: relative;
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+.checkbox-container .checkmark:after {
+  content: "";
+  position: absolute;
+  left: 6px;
+  top: 2px;
+  width: 6px;
+  height: 12px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.checkbox-container .checkbox:checked + .checkmark {
+  background-color: #28a745;
+  border-color: #28a745;
+}
+.checkbox-container .checkbox:checked + .checkmark:after {
+  opacity: 1;
 }
 
 .columna {
@@ -110,45 +188,6 @@ footer p {
   text-align: center;
 }
 
-.text-column, .image-container {
-  display: inline-block;
-  vertical-align: top;
-  width: 20%;
-  margin: 0 2%;
-  text-align: justify;
-}
-
-.image-container {
-  width: 36%;
-  text-align: center;
-}
-
-.cebador-image {
-  max-width: 100%;
-  height: auto;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-.checklist {
-  list-style-type: none;
-  padding-left: 0;
-}
-
-.navbar {
-  transition: background-color 0.3s ease;
-}
-.navbar:hover {
-  background-color: #1e7e34;
-}
-
-img {
-  transition: transform 0.3s ease;
-}
-img:hover {
-  transform: scale(1.05);
-}
-
 .testimonios {
   background-color: #f9f9f9;
   padding: 40px 20px;
@@ -163,78 +202,16 @@ img:hover {
   background-color: white;
   border-left: 5px solid #28a745;
   padding: 20px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
   margin: 20px 0;
   transition: box-shadow 0.3s ease;
 }
 .testimonios .blockquote:hover {
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
 }
 .testimonios .blockquote-footer {
   color: #6c757d;
-}
-
-#testimonios {
-  background-color: #f8f9fa;
-  padding: 3rem 0;
-}
-#testimonios h2 {
-  font-family: "Playfair Display", serif;
-  font-size: 2.5rem;
-  color: #2c3e50;
-  margin-bottom: 2rem;
-}
-#testimonios .testimonial-item {
-  font-family: "Lato", sans-serif;
-  font-style: italic;
-  color: #34495e;
-  font-size: 1.2rem;
-}
-#testimonios .testimonial-item h5 {
-  font-family: "Playfair Display", serif;
-  color: #2c3e50;
-  margin-top: 1rem;
-  font-size: 1.4rem;
-}
-#testimonios .carousel-control-prev-icon,
-#testimonios .carousel-control-next-icon {
-  background-color: #2c3e50;
-}
-
-.titulo-testimonios {
-  text-align: center;
-}
-
-.mate-lista {
-  list-style: none;
-  padding: 0;
-}
-.mate-lista li {
-  display: flex;
-  align-items: center;
-  margin-bottom: 15px;
-}
-.mate-lista li .mate-icono {
-  width: 30px;
-  height: auto;
-  margin-right: 10px;
-  transition: transform 0.3s ease-in-out;
-}
-.mate-lista li:hover .mate-icono {
-  transform: scale(1.2);
-}
-
-h2, h3, p strong {
-  cursor: pointer;
-  display: inline-block;
-  padding: 2px 4px;
-  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
-  border-radius: 4px;
-}
-h2:hover, h3:hover, p strong:hover {
-  background-color: #eaf5ea;
-  color: #155724;
 }
 
 .mate-polemica {
@@ -266,13 +243,11 @@ h2:hover, h3:hover, p strong:hover {
   transition: transform 0.3s ease;
 }
 
-/* Responsividad para pantallas grandes */
 @media (min-width: 992px) {
   .header-content {
     padding: 20px;
   }
 }
-/* Responsividad para tabletas */
 @media (max-width: 991px) and (min-width: 768px) {
   .navbar {
     margin-top: 70px;
@@ -281,36 +256,7 @@ h2:hover, h3:hover, p strong:hover {
     width: 100%;
     position: relative;
   }
-  .navbar ul {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 0;
-    margin: 0;
-  }
-  .navbar li {
-    margin: 5px 0;
-  }
-  .navbar-toggler {
-    background-color: #4caf50;
-    border: none;
-    border-radius: 5px;
-    padding: 10px;
-    transition: background-color 0.3s;
-  }
-  .navbar-toggler:hover {
-    background-color: #4caf50;
-  }
-  .navbar-toggler-icon {
-    background-image: none;
-  }
-  .navbar-toggler:before {
-    content: "☰";
-    font-size: 24px;
-    color: white;
-  }
 }
-/* Responsividad para teléfonos */
 @media (max-width: 767px) {
   .navbar {
     margin-top: 70px;
@@ -318,34 +264,6 @@ h2:hover, h3:hover, p strong:hover {
     text-align: center;
     width: 100%;
     position: relative;
-  }
-  .navbar ul {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 0;
-    margin: 0;
-  }
-  .navbar li {
-    margin: 5px 0;
-  }
-  .navbar-toggler {
-    background-color: #4caf50;
-    border: none;
-    border-radius: 5px;
-    padding: 10px;
-    transition: background-color 0.3s;
-  }
-  .navbar-toggler:hover {
-    background-color: #4caf50;
-  }
-  .navbar-toggler-icon {
-    background-image: none;
-  }
-  .navbar-toggler:before {
-    content: "☰";
-    font-size: 24px;
-    color: white;
   }
 }
 
