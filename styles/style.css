@@ -8,6 +8,12 @@ body {
   padding-top: 70px;
 }
 
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
 header {
   background: linear-gradient(45deg, #28a745, rgb(30.1449275362, 125.8550724638, 52));
   color: black;
@@ -48,24 +54,6 @@ section {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
-img, .btn, h2, h3, p strong {
-  transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
-}
-img:hover, .btn:hover, h2:hover, h3:hover, p strong:hover {
-  transform: scale(1.05);
-}
-
-h2, h3, p strong {
-  cursor: pointer;
-  display: inline-block;
-  padding: 2px 4px;
-  border-radius: 4px;
-}
-h2:hover, h3:hover, p strong:hover {
-  background-color: #eaf5ea;
-  color: #155724;
-}
-
 .con-imagen {
   display: flex;
   align-items: center;
@@ -101,6 +89,38 @@ h2:hover, h3:hover, p strong:hover {
   height: auto;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+img, .btn, h2, h3, p strong {
+  transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+img:hover, .btn:hover, h2:hover, h3:hover, p strong:hover {
+  transform: scale(1.05);
+}
+
+h2, h3, p strong {
+  cursor: pointer;
+  display: inline-block;
+  padding: 2px 4px;
+  border-radius: 4px;
+}
+
+h2:hover, h3:hover, p strong:hover {
+  background-color: #eaf5ea;
+  color: #155724;
+}
+
+.columna {
+  width: 45%;
+  float: left;
+  margin-right: 5%;
+  background-color: rosybrown;
+  border-radius: 8px;
+}
+
+.columna:last-child {
+  margin-right: 0;
 }
 
 .checkbox-container {
@@ -143,17 +163,6 @@ h2:hover, h3:hover, p strong:hover {
   opacity: 1;
 }
 
-.columna {
-  width: 45%;
-  float: left;
-  margin-right: 5%;
-  background-color: rosybrown;
-  border-radius: 8px;
-}
-.columna:last-child {
-  margin-right: 0;
-}
-
 footer {
   background-color: #28a745;
   color: white;
@@ -171,21 +180,6 @@ footer a:hover {
 }
 footer p {
   margin: 0;
-}
-
-.clearfix::after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-.mate-list {
-  margin-top: 20px;
-  padding-left: 20px;
-}
-
-.cebador-content {
-  text-align: center;
 }
 
 .testimonios {

@@ -1,0 +1,27 @@
+@import 'variables';
+
+@media (min-width: 992px) {
+  .header-content {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 991px) and (min-width: 768px) {
+  .navbar {
+    margin-top: 70px;
+    padding: 10px 0;
+    text-align: center;
+    width: 100%;
+    position: relative;
+  }
+}
+
+@media (max-width: 767px) {
+  .navbar {
+    margin-top: 70px;
+    padding: 10px 0;
+    text-align: center;
+    width: 100%;
+    position: relative;
+  }
+}

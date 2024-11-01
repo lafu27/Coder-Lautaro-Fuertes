@@ -1,0 +1,34 @@
+.mate-polemica {
+    text-align: center;
+    margin-top: 40px;
+  
+    h1 {
+      font-size: 2rem;
+      font-weight: bold;
+      color: #2c3e50;
+    }
+  
+    .enlace-polemica {
+      color: #e74c3c;
+      text-decoration: none;
+      position: relative;
+      font-weight: 700;
+  
+      &::after {
+        content: "⚠️";
+        margin-left: 5px;
+        font-size: 1.2rem;
+      }
+  
+      &:hover {
+        color: #c0392b;
+        text-decoration: underline;
+  
+        &::after {
+          transform: scale(1.2);
+          transition: transform 0.3s ease;
+        }
+      }
+    }
+  }
+  

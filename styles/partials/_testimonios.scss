@@ -1,0 +1,31 @@
+@import 'variables';
+
+.testimonios {
+  background-color: $bg-color;
+  padding: 40px 20px;
+
+  h2 {
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: bold;
+    margin-bottom: 30px;
+  }
+
+  .blockquote {
+    background-color: white;
+    border-left: 5px solid $primary-color;
+    padding: 20px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    margin: 20px 0;
+    transition: box-shadow 0.3s ease;
+
+    &:hover {
+      box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
+    }
+  }
+
+  .blockquote-footer {
+    color: #6c757d;
+  }
+}

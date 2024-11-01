@@ -1,0 +1,16 @@
+@import 'variables';
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: $bg-color;
+  margin: 0;
+  padding: 20px;
+  padding-top: 70px;
+}
+
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}

@@ -1,0 +1,23 @@
+@import 'variables';
+
+footer {
+  background-color: $primary-color;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+
+  a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+
+    &:hover {
+      color: #ddd;
+      text-decoration: underline;
+    }
+  }
+
+  p {
+    margin: 0;
+  }
+}
